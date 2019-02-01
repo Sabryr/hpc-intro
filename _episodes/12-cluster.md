@@ -51,7 +51,8 @@ will notice that the current hostname is also part of our prompt!)
 ```
 {: .bash}
 ```
-gra-login3
+workshop_login_host
+{{ site.workshop_login_host }}
 ```
 {: .output}
 
@@ -67,7 +68,7 @@ many shapes and sizes, but generally are dedicated to doing all of the heavy lif
 doing.
 
 All interaction with the worker nodes is handled by a specialised piece of software called a
-scheduler (the scheduler used in this lesson is called  {{ site.workshop_scheduler }} ). We'll learn more about how to use the
+scheduler (the scheduler used in this lesson is called  {{ site.workshop_scheduler }}). We'll learn more about how to use the
 scheduler to submit jobs next, but for now, it can also tell us more information about the worker
 nodes.
 
