@@ -32,7 +32,7 @@ run where and when.
 > [*notes for the instructor here*](../guide)
 {: .challenge}
 
-The scheduler used in this lesson is SLURM. Although SLURM is not used everywhere, running jobs is
+The scheduler used in this lesson is {{ site.workshop_scheduler }}. Although {{ site.workshop_scheduler }} is not used everywhere, running jobs is
 quite similar regardless of what software is being used. The exact syntax might change, but the
 concepts remain the same.
 
@@ -111,8 +111,8 @@ resources we must customise our job script.
 
 Comments in UNIX (denoted by `#`) are typically ignored. But there are exceptions. For instance the
 special `#!` comment at the beginning of scripts specifies what program should be used to run it
-(typically `/bin/bash`). Schedulers like SLURM also have a special comment used to denote special
-scheduler-specific options. Though these comments differ from scheduler to scheduler, SLURM's
+{{ site.workshop_scheduler }} (typically `/bin/bash`). Schedulers like  also have a special comment used to denote special
+scheduler-specific options. Though these comments differ from scheduler to scheduler, {{ site.workshop_scheduler }}'s
 special comment is `#SBATCH`. Anything following the `#SBATCH` comment is interpreted as an
 instruction to the scheduler.
 
@@ -182,7 +182,7 @@ about how to make sure that you're using resources effectively in a later episod
 
 > ## Job environment variables
 >
-> When SLURM runs a job, it sets a number of environment variables for the job. One of these will
+> When {{ site.workshop_scheduler }} runs a job, it sets a number of environment variables for the job. One of these will
 > let us check our work from the last problem. The `SLURM_CPUS_PER_TASK` variable is set to the
 > number of CPUs we requested with `-c`. Using the `SLURM_CPUS_PER_TASK` variable, modify your job
 > so that it prints how many CPUs have been allocated.
@@ -220,7 +220,7 @@ Our job was killed for exceeding the amount of resources it requested. Although 
 this is actually a feature. Strict adherence to resource requests allows the scheduler to find the
 best possible place for your jobs. Even more importantly, it ensures that another user cannot use
 more resources than they've been given. If another user messes up and accidentally attempts to use
-all of the CPUs or memory on a node, SLURM will either restrain their job to the requested resources
+all of the CPUs or memory on a node, {{ site.workshop_scheduler }} will either restrain their job to the requested resources
 or kill the job outright. Other jobs on the node will be unaffected. This means that one user cannot
 mess up the experience of others, the only jobs affected by a mistake in scheduling will be their
 own.
@@ -266,7 +266,7 @@ JOBID  USER  ACCOUNT  NAME  ST  REASON  START_TIME  TIME  TIME_LEFT  NODES  CPUS
 
 ## Other types of jobs
 
-Up to this point, we've focused on running jobs in batch mode. SLURM also provides the ability to
+Up to this point, we've focused on running jobs in batch mode. {{ site.workshop_scheduler }} also provides the ability to
 run tasks as a one-off or start an interactive session.
 
 There are very frequently tasks that need to be done semi-interactively. Creating an entire job
@@ -306,7 +306,7 @@ Typically, the resulting shell environment will be the same as that for `sbatch`
 
 Sometimes, you will need a lot of resource for interactive use. Perhaps it's our first time running
 an analysis or we are attempting to debug something that went wrong with a previous job.
-Fortunately, SLURM makes it easy to start an interactive job with `srun`:
+Fortunately, {{ site.workshop_scheduler }} makes it easy to start an interactive job with `srun`:
 
 ```
 [remote]$ srun --x11 --pty bash

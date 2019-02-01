@@ -51,7 +51,6 @@ will notice that the current hostname is also part of our prompt!)
 ```
 {: .bash}
 ```
-
 {{ site.workshop_login_host }}
 ```
 {: .output}
