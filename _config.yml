@@ -64,7 +64,8 @@ instructor_post_survey: "https://www.surveymonkey.com/r/instructor_training_post
 # this is the scheduler to be used for the workshop
 # possible values: lsf, slurm, pbs
 workshop_scheduler: "slurm"
-workshop_login_host: "cray-1"
+#The output of the command hostname when logged in
+workshop_login_host: "gra-login3"
 workshop_shared_fast_filesystem: "/fastfs"
 #possible values slurm:sinfo, pbs:pbsnodes
 workshop_nodestatus: "sinfo"
