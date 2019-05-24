@@ -295,7 +295,7 @@ tasks as a one-off with `srun`.
 `hostname` command with `srun`. (We can cancel an `srun` job with `Ctrl-c`.)
 
 ```
-[remote]$ srun {{ job_minimals_srun }} hostname
+[remote]$ srun {{ job.job_minimals_srun }} hostname
 ```
 {: .bash}
 ```
@@ -308,7 +308,7 @@ script, these options are specified on the command-line when starting a job. To 
 uses 2 CPUs for instance, we could use the following command:
 
 ```
-[remote]$ srun {{ job_minimals_srun }} -c 2 echo "This job will use 2 CPUs."
+[remote]$ srun {{ job.job_minimals_srun }} -c 2 echo "This job will use 2 CPUs."
 ```
 {: .bash}
 ```
@@ -325,7 +325,7 @@ an analysis or we are attempting to debug something that went wrong with a previ
 Fortunately, SLURM makes it easy to start an interactive job with `srun`:
 
 ```
-[remote]$ srun {{ job_minimals_srun }} --x11 --pty bash
+[remote]$ srun {{ job.job_minimals_srun }} --x11 --pty bash
 ```
 {: .bash}
 
