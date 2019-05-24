@@ -209,7 +209,7 @@ minutes.
 
 ```
 #!/bin/bash
->{{ site.job_minimals }}
+{{ site.job_minimals }}
 #SBATCH -t 0:0:30
 
 echo 'This script is running on:'
