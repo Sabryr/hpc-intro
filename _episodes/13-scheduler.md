@@ -56,6 +56,13 @@ In this case, the job we want to run is just a shell script. Let's create a demo
 run as a test.
 
 > ## Creating our test job
+~~~
+$ ssh lola@{{ site.job_minimals }}
+~~~
+{: .language-bash}
+
+
+> ## Creating our test job
 > 
 > Using your favourite text editor, create the following script and run it. Does it run on the
 > cluster or just our login node?
