@@ -29,7 +29,7 @@ If you can relate to an instance where you had to wait for a while in a queue to
 popular restaurant, then you may now understand why sometimes your job do not start instanstantly
 as in your laptop.
 
-{% include figure.html max-width="75%" file="/fig/restaurant_queue_manager.svg"
+{% include figure.html max-width="95%" file="/fig/restaurant_queue_manager.svg"
 alt="Compare a job scheduler to a waiter in a restaurant" caption="" %}
 
 
