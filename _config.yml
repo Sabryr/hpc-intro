@@ -78,7 +78,7 @@ scheduler: "slurm"
 login_host: "abel.uio.no"
 cluster_name: "Abel"
 shared_fast_filesystem: "/fastfs"
-site.job_minimals: "#SBASH --account=ln0002 --mem-per-cpu --time=10:00"
+job_minimals: "#SBASH --account=ln0002 --mem-per-cpu --time=10:00"
 
 # Specify that things in the episodes collection should be output.
 collections:
