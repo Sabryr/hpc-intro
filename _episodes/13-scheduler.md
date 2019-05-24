@@ -137,6 +137,7 @@ Submit the following job (`sbatch example-job.sh`):
 
 ```
 #!/bin/bash
+{{ site.job_minimals }}
 #SBATCH -J new_name
 
 echo 'This script is running on:'
