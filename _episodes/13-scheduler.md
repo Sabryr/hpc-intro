@@ -58,7 +58,7 @@ run as a test.
  ## Creating our test job
 
 ~~~
-$ ssh lola@{{ site.job_minimals }}
+$ ssh lola@{{ site.login_host }}
 ~~~
 {: .language-bash}
 
