@@ -76,7 +76,7 @@ start_time: 0
 # possible values: slurm (planned lsf & pbs)
 scheduler: "slurm"
 login_host: "abel.uio.no"
-cluster_name: "abel"
+cluster_name: "Abel"
 shared_fast_filesystem: "/fastfs"
 
 
