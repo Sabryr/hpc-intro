@@ -79,6 +79,7 @@ login_host: "abel.uio.no"
 cluster_name: "Abel"
 shared_fast_filesystem: "/fastfs"
 job_minimals: "#SBATCH --account=ln0002k --mem-per-cpu=2G"
+job_minimals_srun: "--account=ln0002k --mem-per-cpu=2G"
 
 # Specify that things in the episodes collection should be output.
 collections:
