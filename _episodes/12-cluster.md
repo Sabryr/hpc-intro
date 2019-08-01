@@ -24,10 +24,12 @@ keypoints:
 Throughout this material, we will assist Lola Curious and look over her shoulder while she is 
 starting to work at the Institute of Things as a side job to earn some extra money. On the first
 day, her supervisor greets her friendly and welcomes her to the job. She explains what her task is
-and suggests her that she will need to use the cluster on the campus. Lola has so far used her 
-Laptop at home for her studies, so the idea of using a super computer appears a bit intimidating to
-her. Her supervisor notices her anxiety and tells her that she will receive an introduction to the
-super computer after she has requested an account on the cluster. 
+and suggests her that she will need to use the supercomputer on the campus. This supercomputer 
+comprises of large number of computers working as a unit so a better technical term for this is 
+*computer cluster* or just *cluster*. Lola has so far used her Laptop at home for her studies, so 
+the idea of using a cluster appears a bit intimidating to her. Her supervisor notices her anxiety 
+and tells her that she will receive an introduction to it after she has requested an account 
+on the cluster.
 
 Lola walks to the IT department and finishes the paper work to get an account. One of the admins 
 promises to sit down with her in the morning to show her the way around the machine. The admin 
@@ -35,7 +37,9 @@ explains that Lola will use a small to mid-range HPC cluster.
 
 ## Going remote
 
-First of all, the admin asks Lola to connect to the super computer. The admin asks Lola to open 
+First of all, the admin asks Lola to connect to the super computer . 
+
+The admin asks Lola to open 
 a terminal on her laptop and type in the following commands:
 
 ~~~ 
