@@ -93,9 +93,9 @@ file="/fig/serverrack-openclipartorg-psteinb-basedon-ericlemerdy.svg" alt="A rac
 caption="" %}
 
 The methodology of providing the input data, communicating options and flags as well as retrieving
-the results is quite opposite to using a plain laptop. Moreover, using a GUI style interface is 
-often discarded in favor of using the command line. This imposes a double paradigm shift for 
-prospect users:
+the results is quite opposite to using a plain laptop. Moreover, using a (Graphical User Interface) 
+GUI style interface is often discarded in favor of using the command line. This imposes a double 
+paradigm shift for prospect users:
 
 1. they work with the command line (not a GUI style user interface)
 2. they work with a distributed set of computers (called nodes)
