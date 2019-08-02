@@ -35,15 +35,19 @@ Lola walks to the IT department and finishes the paper work to get an account. O
 promises to sit down with her in the morning to show her the way around the machine. The admin 
 explains that Lola will use a small to mid-range HPC cluster.
 
-{% include figure.html url="" max-width="50%" file="/fig/connect-to-remote.svg"
- alt="Connect to cluster" caption="" %}
 
 
 ## Going remote
 
-First of all, the admin asks Lola to connect to the super computer . 
+First of all, the admin asks Lola to connect to the cluster. For this Lola needs to use a 
+Program called the terminal (make sure you have this program in your laptop and refer the
+*setup* section for more details). The terminal is used to establish a connection with the
+cluster via the internet, so commands can be executed there. 
 
-The admin asks Lola to open 
+{% include figure.html url="" max-width="50%" file="/fig/connect-to-remote.svg"
+ alt="Connect to cluster" caption="" %}
+
+The admin asks Lola to open
 a terminal on her laptop and type in the following commands:
 
 ~~~ 
