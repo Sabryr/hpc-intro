@@ -41,8 +41,7 @@ explains that Lola will use a small to mid-range HPC cluster.
 
 First of all, the admin asks Lola to connect to the cluster. For this Lola needs to use a 
 Program called the terminal (make sure you have this program in your laptop and refer the
-*setup* section for more details). The terminal is used to establish a connection with the
-cluster via the internet, so commands can be executed there. 
+*setup* section for more details).
 
 {% include figure.html url="" max-width="50%" file="/fig/connect-to-remote.svg"
  alt="Connect to cluster" caption="" %}
