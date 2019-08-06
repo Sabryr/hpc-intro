@@ -11,9 +11,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="143.16573mm"
-   height="83.426086mm"
-   viewBox="0 0 143.16573 83.426086"
+   width="142.26949mm"
+   height="82.262199mm"
+   viewBox="0 0 142.26949 82.262199"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (unknown)"
@@ -228,10 +228,10 @@
     </linearGradient>
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="153.87693 : 157.0686 : 1"
-       inkscape:vp_y="0 : -471.31167 : 0"
-       inkscape:vp_z="-48.88561 : 157.0686 : 1"
-       inkscape:persp3d-origin="52.495668 : 180.39852 : 1"
+       inkscape:vp_x="153.87694 : 157.06859 : 1"
+       inkscape:vp_y="0 : -471.31165 : 0"
+       inkscape:vp_z="-48.885612 : 157.06859 : 1"
+       inkscape:persp3d-origin="52.495671 : 180.39851 : 1"
        id="perspective877" />
     <linearGradient
        id="linearGradient4510">
@@ -5674,8 +5674,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.9656678"
-     inkscape:cx="302.57946"
-     inkscape:cy="164.4196"
+     inkscape:cx="233.31269"
+     inkscape:cy="143.9869"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -5701,7 +5701,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-24.669575,-102.47081)">
+     transform="translate(-21.005616,-102.73233)">
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#504f26;stroke-width:0.53611344;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect21910"
@@ -9886,26 +9886,26 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:9.4029665px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.23507418px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="105.71356"
-       y="102.07578"
+       x="109.7315"
+       y="101.99456"
        id="text4517-6"
        transform="scale(0.9103752,1.0984482)"><tspan
          sodipodi:role="line"
          id="tspan4515-7"
-         x="105.71356"
-         y="102.07578"
+         x="109.7315"
+         y="101.99456"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.26864481px;font-family:Sans;-inkscape-font-specification:'Sans Bold';stroke-width:0.23507418px">Cluster</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.88652754px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1221632px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="28.856791"
-       y="92.43795"
+       x="27.514862"
+       y="104.92927"
        id="text4517-6-5"
        transform="scale(0.8642778,1.1570354)"><tspan
          sodipodi:role="line"
          id="tspan4515-7-3"
-         x="28.856791"
-         y="92.43795"
+         x="27.514862"
+         y="104.92927"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.25768542px;font-family:Sans;-inkscape-font-specification:'Sans Bold';stroke-width:0.1221632px">Laptop</tspan></text>
     <g
        id="g4499-3"
@@ -25037,7 +25037,7 @@
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.68499303px;font-family:Sans;-inkscape-font-specification:'Sans Bold';stroke-width:0.17891505px">Jobs</tspan></text>
     <g
        id="g6170"
-       transform="translate(0,0.52916667)">
+       transform="matrix(1.2490628,0,0,1.4862266,-8.3656428,-48.586955)">
       <g
          transform="matrix(0.10415409,0,0,0.07880457,28.825393,88.709436)"
          id="g2198">
@@ -25223,8 +25223,8 @@
            sodipodi:role="line">Internet</tspan></text>
     </g>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.33218578;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart-4);marker-mid:url(#Arrow1Lend-2-5);marker-end:url(#Arrow2Lend-4)"
-       d="m 46.91568,110.78405 c 20.572154,14.63917 20.572154,14.63917 20.572154,14.63917"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26943663;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart-4);marker-mid:url(#Arrow1Lend-2-5);marker-end:url(#Arrow2Lend-4)"
+       d="m 51.907919,112.8535 c 15.672956,12.64144 15.672956,12.64144 15.672956,12.64144"
        id="path4555-7"
        inkscape:connector-curvature="0" />
     <g
@@ -25324,13 +25324,13 @@
        id="path6082"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.09146573;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart-4-1);marker-mid:url(#Arrow1Lend-2-5-7);marker-end:url(#Arrow2Lend-4-9)"
-       d="m 35.89633,113.35905 c 5.471613,-3.07835 5.471613,-3.07835 5.471613,-3.07835"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.222;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart-4-1);marker-mid:url(#Arrow1Lend-2-5-7);marker-end:url(#Arrow2Lend-4-9)"
+       d="m 38.791126,123.21813 c 3.657575,-8.20654 3.657575,-8.20654 3.657575,-8.20654"
        id="path4555-7-6"
        inkscape:connector-curvature="0" />
     <g
        id="g18918"
-       transform="matrix(0.84663554,0,0,0.87823417,-44.468651,-50.614741)">
+       transform="matrix(0.84663554,0,0,0.87823417,-46.431391,-42.406921)">
       <rect
          y="188.58871"
          x="81.328087"
