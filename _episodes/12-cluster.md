@@ -179,6 +179,10 @@ $ free -g
 > for your laptop. How much more powerful is the login node of the cluster compared to your laptop?
 {: .challenge}
 
+## The login node and the worker/compute nodes
+{% include figure.html url="" max-width="50%" file="/fig/login_node.svg"
+ alt="Connect to cluster" caption="" %}
+
 
 ## Transferring Data
 
