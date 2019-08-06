@@ -179,10 +179,30 @@ $ free -g
 > for your laptop. How much more powerful is the login node of the cluster compared to your laptop?
 {: .challenge}
 
+## Using the login node is not using the cluster
+
+As a final word on this lesson, the admin tells Lola that she should never execute long running 
+processes or applications on `{{ site.login_host }}`. This is a server that is used by many users 
+of `{{ site.cluster_name }}`. If Lola starts a lot of long running processes, other users may 
+start seeing their commands taking longer to complete. To actually to do science and complete the
+tasks Lola is meant to complete, a software called __the scheduler__ has to be used. 
+
+
 ## The login node and the worker/compute nodes
+
 {% include figure.html url="" max-width="50%" file="/fig/login_node.svg"
  alt="Connect to cluster" caption="" %}
 
+At this point admin try to emphasize the difference between the login nodes and the worker nodes 
+(also known  as compute nodes) . When Lola reached the cluster using ssh, she landed on a login
+node, which act as an entrance point to the cluster. Login nodes are used for light weight tasks
+such as managing user login, copy files to the cluster , copy files from the cluster, install
+software, submit and monitor jobs etc. We never perform analysis on the login node. If we do the
+login nodes will choke and other users may not be login or copy files. The analysis are performed
+on compute nodes and that process we will learn later in the lessons. This is a main difference
+between executing your program on a remote server and using a cluster to run the program. 
+Lola being a good citizen, acknowledges the  importance of using shared resources in a way that 
+will not hinder the other users. 
 
 ## Transferring Data
 
@@ -315,13 +335,6 @@ $ man scp
 ~~~
 {: .language-bash}
 
-## Using the login node is not using the cluster
-
-As a final word on this lesson, the admin tells Lola that she should never execute long running 
-processes or applications on `{{ site.login_host }}`. This is a server that is used by many users 
-of `{{ site.cluster_name }}`. If Lola starts a lot of long running processes, other users may 
-start seeing their commands taking longer to complete. To actually to do science and complete the
-tasks Lola is meant to complete, a software called __the scheduler__ has to be used. 
 
 > ## All mixed up
 >
