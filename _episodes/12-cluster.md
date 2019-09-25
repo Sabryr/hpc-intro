@@ -79,14 +79,17 @@ This establishes a temporary encrypted connection between Lola's laptop and `{{ 
 The word before the `@` symbol, e.g. `lola` here, is the user account name that Lola has access 
 permissions for on the cluster. 
 
-> ## key pair error
+> ## The authenticity of host
+> When login in for the first time you may get a question whether you trust the server
+> you are trying to connect. If you typed the address correctly (i.e. {{ site.login_host }})
+> then it is safe to say "yes" to the question at the end of this message and 
+> Permanently added this server to trusted hosts
 > ~~~
 > $ ssh lola@{{ site.login_host }}
-> The authenticity of host 'abel.uio.no (129.240.189.141)' can't be established.
+> The authenticity of host '{{ site.login_host }} (###.###.###.##)' can't be established.
 > RSA key fingerprint is SHA256:NwV2/9HMlLfj6hFmXTuA4UVievE/uq36K9EYa20CteI.
 > Are you sure you want to continue connecting (yes/no)? yes
-> Warning: Permanently added 'abel.uio.no,129.240.189.141' (RSA) to the list of known hosts.
-> Last login: Thu Sep  5 14:18:43 2019 from login-0-0.local
+> Warning: Permanently added '{{ site.login_host }}' (RSA) to the list of known hosts.
 ~~~
 {: .callout}
 
