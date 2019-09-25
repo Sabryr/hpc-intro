@@ -79,13 +79,15 @@ This establishes a temporary encrypted connection between Lola's laptop and `{{ 
 The word before the `@` symbol, e.g. `lola` here, is the user account name that Lola has access 
 permissions for on the cluster. 
 
-## key pair error
-sabryr@jangama-uio-no:~$ ssh abel.uio.no
-The authenticity of host 'abel.uio.no (129.240.189.141)' can't be established.
-RSA key fingerprint is SHA256:NwV2/9HMlLfj6hFmXTuA4UVievE/uq36K9EYa20CteI.
-Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added 'abel.uio.no,129.240.189.141' (RSA) to the list of known hosts.
-Last login: Thu Sep  5 14:18:43 2019 from login-0-0.local
+> ## key pair error
+> ~~~
+> $ ssh lola@{{ site.login_host }}
+> The authenticity of host 'abel.uio.no (129.240.189.141)' can't be established.
+> RSA key fingerprint is SHA256:NwV2/9HMlLfj6hFmXTuA4UVievE/uq36K9EYa20CteI.
+> Are you sure you want to continue connecting (yes/no)? yes
+> Warning: Permanently added 'abel.uio.no,129.240.189.141' (RSA) to the list of known hosts.
+> Last login: Thu Sep  5 14:18:43 2019 from login-0-0.local
+~~~
 
 
 > ## Where do I get this `ssh` from ?
