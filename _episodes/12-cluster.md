@@ -83,7 +83,7 @@ permissions for on the cluster.
 > When login in for the first time you may get a question whether you trust the server
 > you are trying to connect. If you typed the address correctly (i.e. {{ site.login_host }})
 > then it is safe to say "yes" to the question at the end of this message and 
-> Permanently added this server to trusted hosts
+> permanently added this server to trusted hosts
 > ~~~
 > $ ssh lola@{{ site.login_host }}
 > The authenticity of host '{{ site.login_host }} (###.###.###.##)' can't be established.
