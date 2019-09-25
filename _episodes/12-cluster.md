@@ -88,6 +88,7 @@ permissions for on the cluster.
 > Warning: Permanently added 'abel.uio.no,129.240.189.141' (RSA) to the list of known hosts.
 > Last login: Thu Sep  5 14:18:43 2019 from login-0-0.local
 ~~~
+{: .callout}
 
 
 > ## Where do I get this `ssh` from ?
