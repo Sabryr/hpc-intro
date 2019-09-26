@@ -117,7 +117,7 @@ $ ls
 {: .language-bash}
 
 ~~~ 
-{{ site.ls-out_1 }}
+{{ site.ls_user_home_output }}
 ~~~
 {: .output}
 
