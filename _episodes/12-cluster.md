@@ -221,18 +221,22 @@ will not hinder the other users.
 
 ## Transferring Data
 
-The admin continues to explain, that typically people perform computationally heavy tasks on the 
-cluster and prepare files that contain the results or a subset of data to create final results 
+The admin continues to explain, that typically people perform computationally heavy tasks on the
+cluster and prepare files that contain the results or a subset of data to create final results
 on the individuals laptop. So communication to and from the cluster is done mostly by transferring
-files. For example, Lola is asked to use a [file of her liking]({{page.root}}/filesystem/home/admin/this_weeks_canteen_menus/todays_canteen_menu.pdf) and transfer it over. For this, he advises her to use the secure copy command, `scp`. As before, this establishes a secure encrypted temporary connection between Lola's laptop and the cluster just for the sake of transferring the files. After the transfer has completed, scp will close the connection again.
+files. For example, Lola is asked to create a text file and transfer it over. For this, he advises
+her to use the secure copy command, `scp`. As before, this establishes a secure encrypted temporary
+connection between Lola's laptop and the cluster just for the sake of transferring the files.
+After the transfer has completed, scp will close the connection again.
 
 ~~~ 
-$ scp todays_canteen_menu.pdf lola@{{ site.login_host }}:todays_canteen_menu.pdf
+$ echo "Test transfer from $HOSTNAME on " $(date) > from_laptop.txt
+$ scp from_laptop.txt lola@{{ site.login_host }}:from_laptop.txt
 ~~~
 {: .language-bash}
 
 ~~~ 
-todays_canteen_menu.pdf                                              100%   28KB  27.6KB/s   00:00
+from_laptop.txt                                              100%   1KB  27.6KB/s   00:00
 ~~~
 {: .output}
 
@@ -242,12 +246,12 @@ uploaded it:
 ~~~ 
 $ ssh lola@{{ site.login_host }}
 Last login: Tue Mar 14 14:17:44 2017 from lolas_laptop
-$ ls
+$ ls from_laptop.txt
 ~~~
 {: .language-bash}
 
 ~~~ 
-todays_canteen_menu.pdf
+from_laptop.txt
 ~~~
 {: .output}
 
@@ -255,17 +259,18 @@ Now, let's try the other way around, i.e. downloading a file from the cluster to
 For this, Lola has to swap the two arguments of the `scp` command she just issued.
 
 ~~~ 
-$ scp lola@{{ site.login_host }}:todays_canteen_menu.pdf todays_canteen_menu_downloaded.pdf
+$ echo "Test transfer from $HOSTNAME on " $(date) > from_cluster.txt
+$ scp lola@{{ site.login_host }}:from_cluster from_cluster
 ~~~
 {: .language-bash}
 
 Lola notices how the command line changed. First, she has to enter the source 
 (`lola@{{ site.login_host }}`) then put a `:` and continue with the path of the file she wants
 to download. After that, separated by a space, the destination has to be provided, which in this
-case is a file `todays_canteen_menu_downloaded.pdf` in the current directory.
+case is a file `from_cluster.txt` in the current directory.
 
 ~~~
-todays_canteen_menu.pdf                                                100%   28KB  27.6KB/s   00:00
+from_cluster.txt                                              100%   1KB  27.6KB/s   00:00
 ~~~
 {: .output}
 
@@ -276,45 +281,37 @@ todays_canteen_menu.pdf                                                100%   28
 > the regular shell. For example,
 > 
 > ~~~ 
-> $ scp lola@{{ site.login_host }}:todays_canteen_menu.pdf todays_canteen_menu_downloaded.pdf
+> $ scp lola@{{ site.login_host }}:from_cluster.txt from_cluster
 > ~~~
 > {: .language-bash}
 > 
 > yields two relative paths. For the remote source `lola@{{ site.login_host }}:todays_canteen_menu.pdf`, 
 > the file name mentioned after the colon, is a relative path to the home directory. For brevity, 
 > this information is not shown. The same is true for the destination on the local machine 
-> `todays_canteen_menu_downloaded.pdf`. This is a relative path to the folder Lola currently works in.
+> `from_cluster`. This is a relative path to the folder Lola currently works in.
 > The same command as above expressed with absolute paths, could look like this (if Lola currently 
 > works inside `/home/lola/work`):
 >
 > ~~~ 
-> $ scp lola@{{ site.login_host }}:/home/lola/todays_canteen_menu.pdf /home/lola/work/todays_canteen_menu_downloaded.pdf
+> $ scp lola@{{ site.login_host }}:{{ site.cluster_home }}/from_cluster.txt /home/lola/work/from_cluster
 > ~~~
 > {: .language-bash}
 {: .callout}
 
-Lola has a look in the current directory and indeed `todays_canteen_menu_downloaded.pdf`. 
+Lola has a look in the current directory and indeed `from_cluster`. 
 She opens it with her pdf reader and can tell that it contains indeed the same content as 
 the original one. The admin explains that if she would have used the same name as the 
 destination, i.e. `todays_canteen_menu.pdf`, `scp` would have overwritten her local copy.
 
 To finish, The admin asks Lola that she can also transfer entire directories. She prepared a
-temporary directory on the cluster for her under `/tmp/this_weeks_canteen_menus`. She asks 
+temporary directory on the cluster for her under `/tmp/lolas_files`. She asks 
 Lola to obtain a copy of the entire directory onto her laptop.
 
 ~~~ 
-$ scp -r lola@{{ site.login_host }}:/tmp/this_weeks_canteen_menus .
+$ scp -r lola@{{ site.login_host }}:/tmp/lolas_files .
 ~~~
 {: .language-bash}
 
-~~~ 
-canteen_menu_day_2.pdf                                                 100%   28KB  27.6KB/s   00:00    
-canteen_menu_day_3.pdf                                                 100%   28KB  27.6KB/s   00:00    
-canteen_menu_day_5.pdf                                                 100%   28KB  27.6KB/s   00:00    
-canteen_menu_day_4.pdf                                                 100%   28KB  27.6KB/s   00:00    
-canteen_menu_day_1.pdf                                                 100%   28KB  27.6KB/s   00:00
-~~~
-{: .output}
 
 The trailing `.` is a short-hand to represent the current working directory that Lola currently 
 calls `scp` from. When inspecting this directory, Lola sees the transferred directory:
@@ -325,23 +322,12 @@ $ ls
 {: .language-bash}
 
 ~~~
-this_weeks_canteen_menus/  todays_canteen_menu_downloaded.pdf  todays_canteen_menu.pdf
+lolas_files/  from_cluster.txt from_laptop.txt  
 ~~~
 {: .output}
 
 A closer look into that directory using the relative path with respect to the current one:
 
-~~~ 
-$ ls this_weeks_canteen_menus/
-~~~
-{: .language-bash}
-
-reveals the transferred files.
-
-~~~ 
-canteen_menu_day_1.pdf  canteen_menu_day_2.pdf  canteen_menu_day_3.pdf  canteen_menu_day_4.pdf  canteen_menu_day_5.pdf
-~~~
-{: .output}
 
 Rob suggests to Lola to consult the man page of `scp` for further details by calling:
 
