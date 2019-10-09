@@ -1,3 +1,4 @@
+
 #------------------------------------------------------------
 # Values for this lesson.
 #------------------------------------------------------------
@@ -75,8 +76,8 @@ start_time: 0
 # this is the scheduler to be used for the workshop
 # possible values: slurm (planned lsf & pbs)
 scheduler: "slurm"
-login_host: "abel.uio.no"
-cluster_name: "Abel"
+login_host: "saga.sigma2.no"
+cluster_name: "SAGA"
 shared_fast_filesystem: "/fastfs"
 job_minimals: "#SBATCH --account=ln0002k --mem-per-cpu=2G"
 job_minimals_srun: "--account=ln0002k --mem-per-cpu=2G --time=10:00"
