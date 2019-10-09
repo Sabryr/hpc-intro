@@ -256,10 +256,18 @@ from_laptop.txt
 {: .output}
 
 Now, let's try the other way around, i.e. downloading a file from the cluster to Lola's laptop.
-For this, Lola has to swap the two arguments of the `scp` command she just issued.
+For this, Lola has to swap the two arguments of the `scp` command she just issued. First she 
+creates a file while logged into the cluster and then log her self out
 
 ~~~ 
 $ echo "Test transfer from $HOSTNAME on " $(date) > from_cluster.txt
+$ logout 
+~~~
+{: .language-bash}
+
+Then from the lptop she issues the following command. 
+
+~~~ 
 $ scp lola@{{ site.login_host }}:from_cluster from_cluster
 ~~~
 {: .language-bash}
