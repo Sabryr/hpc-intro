@@ -268,7 +268,7 @@ $ logout
 Then from the lptop she issues the following command. 
 
 ~~~ 
-$ scp lola@{{ site.login_host }}:from_cluster from_cluster
+$ scp lola@{{ site.login_host }}:from_cluster.txt from_cluster.txt
 ~~~
 {: .language-bash}
 
