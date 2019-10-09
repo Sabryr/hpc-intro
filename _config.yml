@@ -81,7 +81,7 @@ cluster_name: "SAGA"
 shared_fast_filesystem: "/fastfs"
 job_minimals: "#SBATCH --account=ln0002k --mem-per-cpu=2G"
 job_minimals_srun: "--account=ln0002k --mem-per-cpu=2G --time=10:00"
-ls_user_home_output: "00_README_Abel nobackup"
+ls_user_home_output: ""
 
 # Specify that things in the episodes collection should be output.
 collections:
