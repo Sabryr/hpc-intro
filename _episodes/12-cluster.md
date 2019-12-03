@@ -29,6 +29,10 @@ media platforms), as well as more traditional "compute" resources. An *HPC syste
 is a term used to describe a network of computers. The computers in a cluster typically share a common
 purpose, and are used to accomplish tasks that might otherwise be too big for any one computer.
 
+
+{% include figure.html url="" max-width="50%" file="/fig/connect-to-remote.svg"
+ alt="Connect to cluster" caption="" %}
+
 ## Logging in
 
 Go ahead and log in to the cluster: {{ site.host_name }} at {{ site.host_location }}.
