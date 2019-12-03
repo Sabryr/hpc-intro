@@ -94,6 +94,8 @@ sched_comment: "#SBATCH"
 sched_flag_name: "--job-name"
 sched_hist: "sacct -u yourUsername"
 sched_flag_histdetail: "-l -j"
+job_minimals: "#SBATCH --account=NNxxxxK --mem-per-cpu=2G --time=10:00"
+job_minimals_srun: "--account=NNxxxxK --mem-per-cpu=2G --time=10:00"
 
 # Interactive queue names, one or more as a list
 workshop_interactive_queues:

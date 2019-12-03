@@ -63,6 +63,8 @@ run as a test.
 >```
 >#!/bin/bash
 >
+>{{ site.job_minimals }}
+>
 > echo 'This script is running on:'
 > hostname
 > sleep 120
