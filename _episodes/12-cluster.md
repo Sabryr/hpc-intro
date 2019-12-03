@@ -63,6 +63,9 @@ permissions for on the cluster.
 > your password just like in the example above.
 {: .callout}
 
+{% include /snippets/12/authenticity_of_host.snip %}
+
+authenticity_of_host.snip
 ## Where are we?
 
 Very often, many users are tempted to think of a high-performance computing installation as one
