@@ -65,7 +65,6 @@ permissions for on the cluster.
 
 {% include /snippets/12/authenticity_of_host.snip %}
 
-authenticity_of_host.snip
 ## Where are we?
 
 Very often, many users are tempted to think of a high-performance computing installation as one
@@ -99,12 +98,25 @@ many shapes and sizes, but generally are dedicated to long or hard tasks that re
 computational resources.
 
 All interaction with the worker nodes is handled by a specialized piece of software called a
-scheduler (the scheduler used in this lesson is called {{ site.workshop_shed_name }}). We'll
+scheduler (the scheduler used in this lesson is called {{ site.sched_name }}). We'll
 learn more about how to use the scheduler to submit jobs next, but for now, it can also tell us
-more information about the worker
-nodes.
+more information about the worker nodes.
 
-For example, we can view all of the worker nodes with the `{{ site.sched_info }}` command.
+{% include figure.html url="" max-width="50%" file="/fig/login_node.svg"
+ alt="Connect to cluster" caption="" %}
+
+When a user login to the cluster using ssh, he or she landed on a login node, which act as an 
+entrance point to the cluster. Login nodes are used for light weight tasks
+such as managing user login, copy files to the cluster , copy files from the cluster, install
+software, submit and monitor jobs etc. We never perform analysis on the login node. If we do the
+login nodes will choke and other users may not be login or copy files. The analysis are performed
+on compute nodes and that process we will learn later in the lessons. This is a main difference
+between executing your program on a remote server and using a cluster to run the program.
+Lola being a good citizen, acknowledges the  importance of using shared resources in a way that
+will not hinder the other users.
+
+
+We can view all of the worker nodes with the `{{ site.sched_info }}` command.
 
 ```
 {{ site.host_prompt}} {{ site.sched_info }}
