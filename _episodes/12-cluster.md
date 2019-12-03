@@ -77,9 +77,10 @@ notice that the current hostname is also part of our prompt!)
 {: .bash}
 
 ```
-{{ site.host_name }}
+{{ site.host_name_print }}
 ```
 {: .output}
+
 
 ## Nodes
 

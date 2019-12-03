@@ -75,6 +75,7 @@ instructor_post_survey: "https://www.surveymonkey.com/r/instructor_training_post
 #     cp -r _extras/snippet_library/EPCC_Cirrus_pbs/* _includes/snippets
 #
 host_name: "Saga"
+host_name_print: "login-2.saga.sigma2.no"
 host_login: "saga.sigma2.no"
 host_location: "Uninett Sigma2 AS"
 host_homedir: "/cluster/home/"
