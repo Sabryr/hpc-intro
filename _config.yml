@@ -20,29 +20,31 @@
 # installation. Remember to keep the leading slash on the
 # `snippets` variable below!
 
-snippets: "/snippets_library/ComputeCanada_Graham_slurm"
+
+#snippets: "/snippets_library/ComputeCanada_Graham_slurm"
+snippets: "/snippets_library/SIGMA2_Norway_slurm"
 
 local:
   prompt: "[user@laptop ~]$"
 
 remote:
-  name: "Graham"
-  login: "graham.computecanada.ca"
-  host: "gra-login1"
+  name: "login-1.saga.sigma2.no"
+  login: "saga.sigma2.no"
+  host: "login-1.SAGA"
   node: "aci-377"
-  location: "University of Waterloo"
+  location: "NTNU,Trondheim, Norway"
   homedir: "/home"
-  prompt: "[yourUsername@gra-login1 ~]$"
+  prompt: "[yourUsername@login-1.SAGA ~]$"
 
 sched:
   name: "SLURM"
-  user: "yourUsername"
+  user: "$USER"
   submit:
     name: "sbatch"
     options: ""
   status: "squeue"
   flag:
-    user: "-u yourUsername"
+    user: "-u $USER"
     interactive: ""
     histdetail: "-l -j"
     name: "-J"
@@ -51,7 +53,7 @@ sched:
   interactive: "srun"
   info: "sinfo"
   comment: "#SBATCH"
-  hist: "sacct -u yourUsername"
+  hist: "sacct -u $USER"
 
 # Interactive queue names, one or more as a list
 workshop_interactive_queues:
