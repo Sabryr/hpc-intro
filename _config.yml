@@ -22,7 +22,7 @@
 #To stash
 
 #snippets: "/snippets_library/ComputeCanada_Graham_slurm"
-snippets: "/snippets_library/SIGMA2_Norway_slurm"
+snippets: "/snippets_library/Norway_SIGMA2_SAGA_slurm"
 
 local:
   prompt: "[user@laptop ~]$"
