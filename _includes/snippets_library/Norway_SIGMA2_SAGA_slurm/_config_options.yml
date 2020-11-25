@@ -17,7 +17,7 @@
 # installation. Remember to keep the leading slash on the
 # `snippets` variable below!
 
-snippets: "/snippets_library/SIGMA2_Norway_slurm"
+snippets: "/snippets_library/Norway_SIGMA2_SAGA_slurm"
 
 local:
   prompt: "[user@laptop ~]$"
@@ -29,14 +29,17 @@ remote:
   node: "aci-377"
   location: "NTNU,Trondheim, Norway"
   homedir: "/home"
+  user: "$USER"
   prompt: "[yourUsername@login-1.SAGA ~]$"
 
 sched:
   name: "SLURM"
-  user: "$USER"
   submit:
     name: "sbatch"
     options: ""
+  queue:
+    debug: "devel"
+    testing: "normal"
   status: "squeue"
   flag:
     user: "-u yourUsername"
@@ -44,13 +47,9 @@ sched:
     histdetail: "-l -j"
     name: "-J"
     time: "-t"
+    queue: "-p"
   del: "scancel"
   interactive: "srun"
   info: "sinfo"
   comment: "#SBATCH"
   hist: "sacct -u $USER"
-
-# Interactive queue names, one or more as a list
-workshop_interactive_queues:
-  - normal
-  - devel

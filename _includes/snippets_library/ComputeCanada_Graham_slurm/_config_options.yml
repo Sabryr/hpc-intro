@@ -29,14 +29,17 @@ remote:
   node: "aci-377"
   location: "University of Waterloo"
   homedir: "/home"
+  user: "yourUsername"
   prompt: "[yourUsername@gra-login1 ~]$"
 
 sched:
   name: "SLURM"
-  user: "yourUsername"
   submit:
     name: "sbatch"
     options: ""
+  queue:
+    debug: "debug"
+    testing: "testing"
   status: "squeue"
   flag:
     user: "-u yourUsername"
@@ -44,13 +47,9 @@ sched:
     histdetail: "-l -j"
     name: "-J"
     time: "-t"
+    queue: "-p"
   del: "scancel"
   interactive: "srun"
   info: "sinfo"
   comment: "#SBATCH"
   hist: "sacct -u yourUsername"
-
-# Interactive queue names, one or more as a list
-workshop_interactive_queues:
-  - debug
-  - testing

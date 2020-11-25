@@ -37,7 +37,7 @@ a little complex for new users, but we'll break it down.
 
 To transfer *to* another computer:
 ```
-{{ site.local.prompt }} scp path/to/local/file.txt yourUsername@{{ site.remote.login }}:path/on/{{ site.remote.name }}
+{{ site.local.prompt }} scp path/to/local/file.txt {{ site.remote.user }}@{{ site.remote.login }}:path/on/{{ site.remote.name }}
 ```
 {: .bash}
 
@@ -64,7 +64,7 @@ To transfer *to* another computer:
 > > Now, transfer it to {{ site.remote.name }}:
 > >
 > > ```
-> > {{ site.local.prompt }} scp calling-card.txt yourUsername@{{ site.remote.login }}:~/
+> > {{ site.local.prompt }} scp calling-card.txt {{ site.remote.user }}@{{ site.remote.login }}:~/
 > > ```
 > > {: .bash}
 > >
@@ -77,7 +77,7 @@ To transfer *to* another computer:
 
 To download *from* another computer:
 ```
-{{ site.local.prompt }} scp yourUsername@{{ site.remote.login }}:path/on/{{ site.remote.name }}/file.txt path/to/local/
+{{ site.local.prompt }} scp {{ site.remote.user }}@{{ site.remote.login }}:path/on/{{ site.remote.name }}/file.txt path/to/local/
 ```
 {: .bash}
 
@@ -86,14 +86,14 @@ after the `:` is relative to our home directory. We can simply just add a `:` an
 if we don't care where the file goes.
 
 ```
-{{ site.local.prompt }} scp local-file.txt yourUsername@{{ site.remote.login }}:
+{{ site.local.prompt }} scp local-file.txt {{ site.remote.user }}@{{ site.remote.login }}:
 ```
 {: .bash}
 
 To recursively copy a directory, we just add the `-r` (recursive) flag:
 
 ```
-{{ site.local.prompt }} scp -r some-local-folder yourUsername@{{ site.remote.login }}:target-directory/
+{{ site.local.prompt }} scp -r some-local-folder {{ site.remote.user }}@{{ site.remote.login }}:target-directory/
 ```
 {: .bash}
 
@@ -116,7 +116,7 @@ effect for `scp -r`, but is important in other commands, like `rsync`.
 > The syntax is similar to `scp`. To transfer *to* another computer with commonly used options:
 >
 > ```
-> {{ site.local.prompt }} rsync -avzP path/to/local/file.txt yourUsername@{{ site.remote.login }}:directory/path/on/{{ site.remote.name }}/
+> {{ site.local.prompt }} rsync -avzP path/to/local/file.txt {{ site.remote.user }}@{{ site.remote.login }}:directory/path/on/{{ site.remote.name }}/
 > ```
 > {: .bash}
 >
@@ -129,7 +129,7 @@ effect for `scp -r`, but is important in other commands, like `rsync`.
 > To recursively copy a directory, we can use the same options:
 >
 > ```
-> {{ site.local.prompt }} rsync -avzP path/to/local/dir yourUsername@{{ site.remote.login }}:directory/path/on/{{ site.remote.name }}/
+> {{ site.local.prompt }} rsync -avzP path/to/local/dir {{ site.remote.user }}@{{ site.remote.login }}:directory/path/on/{{ site.remote.name }}/
 > ```
 > {: .bash}
 > 
@@ -145,7 +145,7 @@ effect for `scp -r`, but is important in other commands, like `rsync`.
 > To download a file, we simply change the source and destination:
 >
 > ```
-> {{ site.local.prompt }} rsync -avzP yourUsername@{{ site.remote.login }}:path/on/{{ site.remote.name }}/file.txt path/to/local/
+> {{ site.local.prompt }} rsync -avzP {{ site.remote.user }}@{{ site.remote.login }}:path/on/{{ site.remote.name }}/file.txt path/to/local/
 > ```
 > {: .bash}
 {: .callout}
@@ -202,7 +202,11 @@ The options we used for `tar` are:
 - `-f mydata.tar` - Create the archive in file *output_data.tar*
 
 The tar command allows users to concatenate flags. Instead of typing `tar -c -v -f`, we can use
-`tar -cvf`. We can also use the `tar` command to extract the files from the archive once we have
+`tar -cvf`. 
+
+The `tar` command can also be used to interrogate and unpack archive files. The `-t` argument 
+("**t**able of contents") lists the contents of the referred-to file without unpacking it.  
+The `-x` ("e**x**tract") flag unpacks the referred-to file.  To unpack the file after we have 
 transferred it:
 
 ```
@@ -225,8 +229,8 @@ indicate it is `gzip`-compressed, e.g.:
 {: .bash}
 
 The `tar` command is used to extract the files from the archive in exactly the same way as for
-uncompressed data as `tar` recognizes it is compressed and un-compresses and extracts at the 
-same time:
+uncompressed data. The `tar` command recognizes that the data is compressed, and automatically 
+selects the correct decompression algorithm at the time of extraction:
 
 ```
 {{ site.local.prompt }} tar -xvf output_data.tar.gz
