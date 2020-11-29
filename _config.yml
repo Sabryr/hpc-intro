@@ -35,6 +35,7 @@ remote:
   location: "NTNU,Trondheim, Norway"
   homedir: "/home"
   prompt: "[yourUsername@login-1.SAGA ~]$"
+  user: "<YOUR-SAGA-USERNAME>"
 
 sched:
   name: "SLURM"
