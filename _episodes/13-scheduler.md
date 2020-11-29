@@ -95,7 +95,7 @@ distinction between running the job through the scheduler and just "running it".
 to the scheduler, we use the `{{ site.sched.submit.name }}` command.
 
 ```
-{{ site.remote.prompt }} {{ site.sched.submit.name }} {{ site.sched.submit.options }} example-job.sh
+{{ site.remote.prompt }} {{ site.sched.submit.name }} {{ site.sched.submit.options_min }} example-job.sh
 ```
 {: .bash}
 
@@ -172,7 +172,7 @@ echo "This script has finished successfully."
 ```
 {: .output}
 
-Submit the job (using `{{ site.sched.submit.name }} {{ site.sched.submit.options }} example-job.sh`)
+Submit the job (using `{{ site.sched.submit.name }} {{ site.sched.submit.options_min }} example-job.sh`)
 and monitor it:
 
 ```

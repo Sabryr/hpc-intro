@@ -42,7 +42,8 @@ sched:
   user: "$USER"
   submit:
     name: "sbatch"
-    options: "--account=<YOUR-ACCOUNT> --mem=1G --time=01:00"
+    options_min: "--account=<YOUR-ACCOUNT> --mem=1G --time=01:00"
+    options: ""
   queue:
     debug: "debug"
     testing: "testing"
