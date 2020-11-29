@@ -121,7 +121,7 @@ the interval to a more reasonable value, for example 15 seconds, with the `-n 15
 try using it to monitor another job.
 
 ```
-{{ site.remote.prompt }} {{ site.sched.submit.name }} {{ site.sched.submit.options }} example-job.sh
+{{ site.remote.prompt }} {{ site.sched.submit.name }} {{ site.sched.submit.options_min }} example-job.sh
 {{ site.remote.prompt }} watch -n 15 {{ site.sched.status }} {{ site.sched.flag.user }}
 ```
 {: .bash}
@@ -164,7 +164,7 @@ script:
 
 ```
 #!/bin/bash
-{{ site.sched.comment }} {{ site.sched.flag.name }} new_name
+{{ site.sched.comment }} {{ site.sched.flag.name }}=new_name
 
 echo -n "This script is running on "
 hostname
@@ -222,7 +222,7 @@ about how to make sure that you're using resources effectively in a later episod
 
 > ## Submitting resource requests
 >
-> Submit a job that will use 1 full node and 1 minute of walltime.
+> Submit a job that will use 4 tasks and 1 minute of walltime.
 >
 > > ## Solution
 > >
@@ -233,7 +233,10 @@ about how to make sure that you're using resources effectively in a later episod
 > >
 > > ```
 > > #!/bin/bash
-> > {{ site.sched.comment }} {{ site.sched.flag.time }} 00:01:10
+> > {{ site.sched.comment }} {{ site.sched.flag.account }}=<YOUR-PROJECT_>
+> > {{ site.sched.comment }} {{ site.sched.flag.time }}=00:01:00
+> > {{ site.sched.comment }} {{ site.sched.flag.tasks }}=4
+> > {{ site.sched.comment }} {{ site.sched.flag.mem }}=1G
 > >
 > > echo -n "This script is running on "
 > > sleep 60 # time in seconds
@@ -277,7 +280,7 @@ echo "This script has finished successfully."
 Submit the job and wait for it to finish. Once it is has finished, check the log file.
 
 ```
-{{ site.remote.prompt }} {{ site.sched.submit.name }} {{ site.sched.submit.options }} example-job.sh
+{{ site.remote.prompt }} {{ site.sched.submit.name }} {{ site.sched.submit.options_min }} example-job.sh
 {{ site.remote.prompt }} watch -n 15 {{ site.sched.status }} {{ site.sched.flag.user }}
 ```
 {: .bash}
