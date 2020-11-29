@@ -233,7 +233,7 @@ about how to make sure that you're using resources effectively in a later episod
 > >
 > > ```
 > > #!/bin/bash
-> > {{ site.sched.comment }} {{ site.sched.flag.account }}=<YOUR-PROJECT_>
+> > {{ site.sched.comment }} {{ site.sched.flag.account }}=<YOUR-PROJECT>
 > > {{ site.sched.comment }} {{ site.sched.flag.time }}=00:01:30
 > > {{ site.sched.comment }} {{ site.sched.flag.tasks }}=4
 > > {{ site.sched.comment }} {{ site.sched.flag.mem }}=1G
@@ -268,7 +268,7 @@ minutes.
 ```
 #!/bin/bash
 {{ site.sched.comment }} {{ site.sched.flag.name }} long_job
-{{ site.sched.comment }} {{ site.sched.flag.account }}=<YOUR-PROJECT_>
+{{ site.sched.comment }} {{ site.sched.flag.account }}=<YOUR-PROJECT>
 {{ site.sched.comment }} {{ site.sched.flag.time }}=00:00:30
 {{ site.sched.comment }} {{ site.sched.flag.tasks }}=1
 {{ site.sched.comment }} {{ site.sched.flag.mem }}=1G

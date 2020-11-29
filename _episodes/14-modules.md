@@ -173,6 +173,12 @@ Let's examine the output of `module avail` more closely.
 > >
 > > ```
 > > #!/bin/bash
+> >
+> > {{ site.sched.comment }} {{ site.sched.flag.account }}=<YOUR-PROJECT>
+> > {{ site.sched.comment }} {{ site.sched.flag.time }}=00:01:30
+> > {{ site.sched.comment }} {{ site.sched.flag.tasks }}=1
+> > {{ site.sched.comment }} {{ site.sched.flag.mem }}=1G
+> >
 > > 
 > > module load python3
 > > 
