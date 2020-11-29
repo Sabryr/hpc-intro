@@ -98,13 +98,12 @@ We can test this by using the `which` command.
 so we can use it to tell us where a particular piece of software is stored.
 
 ```
-{{ site.remote.prompt }} which python3
+{{ site.remote.prompt }} which R
 ```
 {: .bash}
-
 {% include {{ site.snippets }}/modules/missing-python.snip %}
 
-We can load the `python3` command with `module load`:
+We can load the `R` command with `module load`:
 
 {% include {{ site.snippets }}/modules/module-load-python.snip %}
 

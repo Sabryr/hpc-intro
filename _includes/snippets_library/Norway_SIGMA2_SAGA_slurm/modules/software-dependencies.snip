@@ -7,8 +7,37 @@ To demonstrate, let's use `module list`. `module list` shows all loaded software
 ```
 
 Currently Loaded Modules:
-  1) StdEnv        (S)   3) bzip2/1.0.6-GCCcore-8.2.0 (H)   5) ncurses/6.1-GCCcore-8.2.0     (H)   7) XZ/5.2.4-GCCcore-8.2.0  (H)   9) libffi/3.2.1-GCCcore-8.2.0 (H)
-  2) GCCcore/8.2.0       4) zlib/1.2.11-GCCcore-8.2.0 (H)   6) libreadline/8.0-GCCcore-8.2.0 (H)   8) GMP/6.1.2-GCCcore-8.2.0 (H)  10) Python/3.7.2-GCCcore-8.2.0
+
+[sabryr@login-3.SAGA ~]$ module list
+
+Currently Loaded Modules:
+  1) StdEnv                              (S)  28) libxml2/2.9.9-GCCcore-8.3.0       (H)
+  2) GCCcore/8.3.0                            29) gettext/0.20.1-GCCcore-8.3.0      (H)
+  3) zlib/1.2.11-GCCcore-8.3.0           (H)  30) PCRE/8.43-GCCcore-8.3.0           (H)
+  4) binutils/2.32-GCCcore-8.3.0         (H)  31) GLib/2.62.0-GCCcore-8.3.0         (H)
+  5) iccifort/2019.5.281                      32) cairo/1.16.0-GCCcore-8.3.0        (H)
+  6) impi/2018.5.288-iccifort-2019.5.281      33) libreadline/8.0-GCCcore-8.3.0     (H)
+  7) iimpi/2019b                              34) Tcl/8.6.9-GCCcore-8.3.0           (H)
+  8) imkl/2019.5.281-iimpi-2019b              35) SQLite/3.29.0-GCCcore-8.3.0       (H)
+  9) intel/2019b                              36) NASM/2.14.02-GCCcore-8.3.0        (H)
+ 10) bzip2/1.0.8-GCCcore-8.3.0           (H)  37) libjpeg-turbo/2.0.3-GCCcore-8.3.0 (H)
+ 11) expat/2.2.7-GCCcore-8.3.0           (H)  38) LibTIFF/4.0.10-GCCcore-8.3.0      (H)
+ 12) libpng/1.6.37-GCCcore-8.3.0         (H)  39) Java/11.0.2
+ 13) freetype/2.10.1-GCCcore-8.3.0       (H)  40) Tk/8.6.9-GCCcore-8.3.0            (H)
+ 14) ncurses/6.1-GCCcore-8.3.0           (H)  41) cURL/7.66.0-GCCcore-8.3.0         (H)
+ 15) util-linux/2.34-GCCcore-8.3.0       (H)  42) NLopt/2.6.1-GCCcore-8.3.0         (H)
+ 16) fontconfig/2.13.1-GCCcore-8.3.0     (H)  43) FFTW/3.3.8-intel-2019b
+ 17) X11/20190717-GCCcore-8.3.0          (H)  44) libsndfile/1.0.28-GCCcore-8.3.0   (H)
+ 18) GMP/6.1.2-GCCcore-8.3.0             (H)  45) ICU/64.2-GCCcore-8.3.0            (H)
+ 19) nettle/3.5.1-GCCcore-8.3.0          (H)  46) Szip/2.1.1-GCCcore-8.3.0          (H)
+ 20) libdrm/2.4.99-GCCcore-8.3.0         (H)  47) HDF5/1.10.5-iimpi-2019b
+ 21) LLVM/9.0.0-GCCcore-8.3.0            (H)  48) UDUNITS/2.2.26-GCCcore-8.3.0
+ 22) XZ/5.2.4-GCCcore-8.3.0              (H)  49) GSL/2.6-iccifort-2019.5.281
+ 23) libunwind/1.3.1-GCCcore-8.3.0       (H)  50) Ghostscript/9.50-GCCcore-8.3.0    (H)
+ 24) Mesa/19.1.7-GCCcore-8.3.0           (H)  51) JasPer/2.0.14-GCCcore-8.3.0       (H)
+ 25) libGLU/9.0.1-GCCcore-8.3.0          (H)  52) LittleCMS/2.9-GCCcore-8.3.0       (H)
+ 26) pixman/0.38.4-GCCcore-8.3.0         (H)  53) ImageMagick/7.0.9-5-GCCcore-8.3.0 (H)
+ 27) libffi/3.2.1-GCCcore-8.3.0          (H)  54) R/3.6.2-intel-2019b
 
   Where:
    S:  Module is Sticky, requires --force to unload or purge
@@ -18,6 +47,7 @@ Currently Loaded Modules:
 {: .output}
 
 ```
+{{ site.host_prompt }} module purge   
 {{ site.host_prompt }} module load Beast/2.5.2-GCC-8.2.0-2.31.1
 {{ site.host_prompt }} module list
 ```

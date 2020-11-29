@@ -222,19 +222,19 @@ about how to make sure that you're using resources effectively in a later episod
 
 > ## Submitting resource requests
 >
-> Submit a job that will use 4 tasks and 1 minute of walltime.
+> Submit a job that will use 4 tasks and 1 minute runtime.
 >
 > > ## Solution
 > >
 > > ```
-> > {{ site.remote.prompt }} cat example-job.sh
+> > {{ site.remote.prompt }} cat 4-tasks-job.sh
 > > ```
 > > {: .bash}
 > >
 > > ```
 > > #!/bin/bash
 > > {{ site.sched.comment }} {{ site.sched.flag.account }}=<YOUR-PROJECT_>
-> > {{ site.sched.comment }} {{ site.sched.flag.time }}=00:01:00
+> > {{ site.sched.comment }} {{ site.sched.flag.time }}=00:01:30
 > > {{ site.sched.comment }} {{ site.sched.flag.tasks }}=4
 > > {{ site.sched.comment }} {{ site.sched.flag.mem }}=1G
 > >
@@ -261,14 +261,17 @@ walltime as an example. We will request 30 seconds of walltime, and attempt to r
 minutes.
 
 ```
-{{ site.remote.prompt }} cat example-job.sh
+{{ site.remote.prompt }} cat failing-example-job.sh
 ```
 {: .bash}
 
 ```
 #!/bin/bash
 {{ site.sched.comment }} {{ site.sched.flag.name }} long_job
-{{ site.sched.comment }} {{ site.sched.flag.time }} 00:00:30
+{{ site.sched.comment }} {{ site.sched.flag.account }}=<YOUR-PROJECT_>
+{{ site.sched.comment }} {{ site.sched.flag.time }}=00:00:30
+{{ site.sched.comment }} {{ site.sched.flag.tasks }}=1
+{{ site.sched.comment }} {{ site.sched.flag.mem }}=1G
 
 echo -n "This script is running on ... "
 sleep 120 # time in seconds
@@ -280,7 +283,7 @@ echo "This script has finished successfully."
 Submit the job and wait for it to finish. Once it is has finished, check the log file.
 
 ```
-{{ site.remote.prompt }} {{ site.sched.submit.name }} {{ site.sched.submit.options_min }} example-job.sh
+{{ site.remote.prompt }} {{ site.sched.submit.name }} {{ site.sched.submit.options }} example-job.sh
 {{ site.remote.prompt }} watch -n 15 {{ site.sched.status }} {{ site.sched.flag.user }}
 ```
 {: .bash}
