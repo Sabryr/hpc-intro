@@ -161,7 +161,10 @@ Some interesting fields include the following:
 > > ## Solution
 > >
 > > ```
-> > {{ site.remote.prompt }} ssh {{ site.sched.node }}
+> > {{ site.remote.prompt }} squeue -u $USER
+> >   JOBID   PARTITION  NAME       USER   ST  TIME  NODES NODELIST
+> >   1590851 normal     parallel   sabryr  R  0:10   1    c5-11
+> > {{ site.remote.prompt }} ssh c5-11
 > > ```
 > > {: .bash}
 > {: .solution}

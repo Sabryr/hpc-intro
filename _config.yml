@@ -31,7 +31,7 @@ remote:
   name: "login-1.saga.sigma2.no"
   login: "saga.sigma2.no"
   host: "login-1.SAGA"
-  node: "aci-377"
+  node: "c5-11"
   location: "NTNU,Trondheim, Norway"
   homedir: "/home"
   prompt: "[yourUsername@login-1.SAGA ~]$"
@@ -59,11 +59,12 @@ sched:
     tasks: "--ntasks"
     account: "--account"
     mem: "--mem"
+    node: "c5-11"
   del: "scancel"
   interactive: "srun"
   info: "sinfo"
   comment: "#SBATCH"
-  hist: "sacct -u $USER"
+  hist: "sacct -j <JOBID>"
 
 #------------------------------------------------------------
 # Values for this lesson

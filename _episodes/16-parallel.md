@@ -79,11 +79,18 @@ Create a submission file, requesting more than one task on a single node:
 {: .bash}
 ```
 #!/bin/bash
-{{ site.sched.comment }} {{ site.sched.flag.name }} parallel-example
-{{ site.sched.comment }} {{ site.sched.flag.queue }} {{ site.sched.queue.testing }}
-{% include {{ site.snippets }}/parallel/four-tasks.snip %}
-module load python3
-mpirun ./pi.py
+#SBATCH --job-name parallel-example
+#SBATCH --account=<YOUR_ACCOUNT>
+#SBATCH --time=00:01:00
+#SBATCH --ntasks=4
+#SBATCH --nodes=1
+#SBATCH --mem-per-cpu=1G
+
+
+module restore
+module load Python/3.6.6-foss-2018b
+mpirun python3 pi.py
+
 ```
 {: .output}
 
