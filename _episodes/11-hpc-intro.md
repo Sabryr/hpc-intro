@@ -17,6 +17,8 @@ keypoints:
   Bash."
 ---
 
+Shared document: [https://docs.google.com/document/d/1Wjnxc83v8D3IOX9lJKI_C-lBJVD80i0oHKb45Wm2X80](https://docs.google.com/document/d/1Wjnxc83v8D3IOX9lJKI_C-lBJVD80i0oHKb45Wm2X80/edit?usp=sharing)
+
 Frequently, research problems that use computing can outgrow the capabilities of the desktop or laptop computer where
 they started:
 
