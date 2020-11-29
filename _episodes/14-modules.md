@@ -159,15 +159,15 @@ Let's examine the output of `module avail` more closely.
 
 > ## Using software modules in scripts
 >
-> Create a job that is able to run `python3 --version`. Remember, no software is loaded by default!
+> Create a job that is able to run `R --version`. Remember, no software is loaded by default!
 > Running a job is just like logging on to the system (you should not assume a module loaded on the
 > login node is loaded on a compute node).
 >
 > > ## Solution
 > >
 > > ```
-> > {{ site.remote.prompt }} nano python-module.sh
-> > {{ site.remote.prompt }} cat python-module.sh
+> > {{ site.remote.prompt }} nano R-module.sh
+> > {{ site.remote.prompt }} cat R-module.sh
 > > ```
 > > {: .bash}
 > >
@@ -180,14 +180,14 @@ Let's examine the output of `module avail` more closely.
 > > {{ site.sched.comment }} {{ site.sched.flag.mem }}=1G
 > >
 > > 
-> > module load python3
+> > module load R/3.6.2-intel-2019b
 > > 
-> > python3 --version
+> > R --version
 > > ```
 > > {: .output}
 > > 
 > > ```
-> > {{ site.remote.prompt }} {{ site.sched.submit.name }} {{ site.sched.submit.options }} python-module.sh
+> > {{ site.remote.prompt }} {{ site.sched.submit.name }} {{ site.sched.submit.options }} R-module.sh
 > > ```
 > > {: .bash}
 > {: .solution}

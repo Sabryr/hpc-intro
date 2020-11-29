@@ -26,7 +26,7 @@ The syntax is: `wget https://some/link/to/a/file.tar.gz`. For example, download 
 files using the following command:
 
 ```
-{{ site.remote.prompt }} wget {{ site.url }}{{ site.baseurl }}/files/bash-lesson.tar.gz
+{{ site.remote.prompt }} wget https://www.uio.no/english/services/it/research/events/2018b/unix.pdf
 ```
 {: .bash}
 
@@ -37,7 +37,7 @@ a little complex for new users, but we'll break it down.
 
 To transfer *to* another computer:
 ```
-{{ site.local.prompt }} scp path/to/local/file.txt {{ site.remote.user }}@{{ site.remote.login }}:path/on/{{ site.remote.name }}
+{{ site.local.prompt }} scp file.txt {{ site.remote.user }}@{{ site.remote.login }}:
 ```
 {: .bash}
 
@@ -77,7 +77,7 @@ To transfer *to* another computer:
 
 To download *from* another computer:
 ```
-{{ site.local.prompt }} scp {{ site.remote.user }}@{{ site.remote.login }}:path/on/{{ site.remote.name }}/file.txt path/to/local/
+{{ site.local.prompt }} scp {{ site.remote.user }}@{{ site.remote.login }}:<PATH_ON_SAGA>/file.txt .
 ```
 {: .bash}
 
